@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- EDIT THESE THREE LINES: your name + a one-line description of you -->
+  <title>Your Name</title>
+  <meta name="author" content="Your Name" />
+  <meta name="description" content="Short description of you — e.g. CS student at University X." />
+
+  <style>
+    /* ============================================================
+       QUICK CUSTOMISATION
+       - Change --accent to recolor every link (try #8a2b2b, #1a7f5a, #d97706).
+       - The whole page uses a serif font for that clean academic look.
+         To get the exact LaTeX "Computer Modern" look, see the note at
+         the very bottom of this file.
+       ============================================================ */
+    :root {
+      --accent: #2a5db0;
+      --ink: #1b1b1b;
+      --muted: #565656;
+      --hairline: #e4e4e4;
+      --maxw: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.55;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    #main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ---------- Profile header ---------- */
+    #profile {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    #profile-pic img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #f0f0f0;
+    }
+    #profile-name {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 4px;
+    }
+    .contact {
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 18px;
+      font-size: 16px;
+    }
+    #profile-bio p { margin: 0 0 14px; }
+
+    /* ---------- Dividers & sections ---------- */
+    .divider {
+      border-top: 1px solid var(--hairline);
+      margin: 40px 0;
+    }
+    .section h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    .section > p { color: var(--muted); font-size: 16px; }
+
+    /* ---------- Updates list ---------- */
+    .updates ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .updates li {
+      padding: 7px 0;
+      border-bottom: 1px dotted var(--hairline);
+      font-size: 16.5px;
+    }
+    .updates li:last-child { border-bottom: none; }
+    .updates .date { color: var(--muted); }
+    details summary {
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 16px;
+      padding-top: 8px;
+    }
+
+    /* ---------- Research / project rows ---------- */
+    .item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 18px 0;
+    }
+    .thumb {
+      flex: 0 0 200px;
+    }
+    .thumb img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      background: #f0f0f0;
+    }
+    .item-title {
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .authors { font-style: italic; margin: 4px 0; font-size: 16px; }
+    .venue { color: var(--muted); font-size: 15.5px; margin: 2px 0; }
+    .desc { font-size: 16px; margin: 8px 0 0; }
+    .tag {
+      background: #fdeecf;
+      color: #8a5a00;
+      font-size: 13px;
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-style: normal;
+      white-space: nowrap;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 48px;
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 680px) {
+      body { font-size: 17px; }
+      #main { padding: 36px 18px 60px; }
+      #profile { flex-direction: column; gap: 18px; }
+      #profile-pic img { width: 120px; height: 120px; }
+      #profile-name { font-size: 28px; }
+      .item { flex-direction: column; gap: 12px; }
+      .thumb, .thumb img { flex-basis: auto; width: 100%; height: auto; }
+      .thumb img { max-height: 220px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body>
+<div id="main">
+
+  <!-- ===================== PROFILE ===================== -->
+  <div id="profile">
+    <div id="profile-pic">
+      <!-- Replace the src below with your photo. Add a file called
+           profile.jpg to your repo, then use: src="profile.jpg" -->
+      <img alt="Your Name"
+           src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><rect width='150' height='150' fill='%23eaeaea'/><circle cx='75' cy='58' r='30' fill='%23c4c4c4'/><rect x='30' y='96' width='90' height='60' rx='30' fill='%23c4c4c4'/></svg>" />
+    </div>
+
+    <div id="profile-intro">
+      <div id="profile-name">Your Name</div>
+
+      <!-- Your email + links. Delete any you don't want. -->
+      <p class="contact">
+        you@example.com
+        (<a href="https://github.com/yourusername">github</a>,
+        <a href="https://www.linkedin.com/in/yourusername/">linkedin</a>,
+        <a href="#">cv</a>)
+      </p>
+
+      <!-- 2–3 short paragraphs about you. Keep it plain and specific. -->
+      <div id="profile-bio">
+        <p>
+          I'm a [student / your role] at [University or Company], where I work on
+          [your main focus — one sentence]. Before that, I [previous thing you did].
+        </p>
+        <p>
+          I'm interested in [your interests]. I especially enjoy [something specific
+          that says a bit about how you think].
+        </p>
+        <p>
+          Outside of that, I [a hobby or two — this makes the page feel human].
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===================== UPDATES ===================== -->
+  <div class="section updates">
+    <h1>Updates</h1>
+    <ul>
+      <li><span class="date">Jan 2026:</span> A recent thing that happened — an award, a new role, a project launch.</li>
+      <li><span class="date">Nov 2025:</span> Another update. Newest goes on top.</li>
+      <li><span class="date">Sep 2025:</span> Started [something], or joined [somewhere].</li>
+
+      <details>
+        <summary>See earlier</summary>
+        <li><span class="date">Jun 2025:</span> An older update, tucked away.</li>
+        <li><span class="date">Feb 2025:</span> One more.</li>
+      </details>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===================== PROJECTS =====================
+       Rename this heading to "Research", "Work", "Experience" —
+       whatever fits you. Copy a whole .item block to add another. -->
+  <div class="section">
+    <h1>Projects</h1>
+    <p>A few things I've built or worked on.</p>
+
+    <div class="item">
+      <div class="thumb">
+        <!-- Swap src for your own image, e.g. src="project1.png" -->
+        <img alt="Project one"
+             src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='130'><rect width='200' height='130' fill='%23e9eef7'/><text x='100' y='70' font-family='Georgia' font-size='14' fill='%238a9ab5' text-anchor='middle'>image</text></svg>" />
+      </div>
+      <div>
+        <a class="item-title" href="#">Project Title One</a>
+        <span class="tag">Highlight</span>
+        <p class="authors">Your Name, A. Collaborator</p>
+        <p class="venue">Where or when — e.g. Personal project, 2025</p>
+        <p>(<a href="#">code</a>, <a href="#">demo</a>, <a href="#">writeup</a>)</p>
+        <p class="desc">One or two sentences on what it is and why it's interesting.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="thumb">
+        <img alt="Project two"
+             src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='130'><rect width='200' height='130' fill='%23eef7ee'/><text x='100' y='70' font-family='Georgia' font-size='14' fill='%238ab59a' text-anchor='middle'>image</text></svg>" />
+      </div>
+      <div>
+        <a class="item-title" href="#">Project Title Two</a>
+        <p class="authors">Your Name</p>
+        <p class="venue">Personal project, 2024</p>
+        <p>(<a href="#">code</a>)</p>
+        <p class="desc">A short description of the second project goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <footer>
+    <p>Built with a plain HTML template, hosted on GitHub Pages.</p>
+  </footer>
+
+</div>
+
+<!-- ============================================================
+     OPTIONAL: exact LaTeX "Computer Modern" look
+     ------------------------------------------------------------
+     The reference site uses the Computer Modern font. To use it,
+     add this line inside <head>, then change the body font-family
+     to include "Latin Modern Roman":
+
+       <link rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/lm-webfont@1.0.0/style.css">
+
+     If it doesn't load, the page safely falls back to Georgia,
+     so you lose nothing by trying.
+     ============================================================ -->
+</body>
+</html>
