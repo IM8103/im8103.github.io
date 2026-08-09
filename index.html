@@ -1,14 +1,17 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+ 
   <!-- EDIT THESE THREE LINES: your name + a one-line description of you -->
   <title>Your Name</title>
   <meta name="author" content="Ian Magnuson" />
   <meta name="description" content="I am an undergraduate student at the University of Toronto's United Health Network and Human Biology Department. I've been fortunate enough to work with Kevin Wang and Ian Chan on various research projects. " />
-
+ 
   <style>
     /* ============================================================
        QUICK CUSTOMISATION
@@ -24,11 +27,11 @@
       --hairline: #e4e4e4;
       --maxw: 860px;
     }
-
+ 
     * { box-sizing: border-box; }
-
+ 
     html { -webkit-text-size-adjust: 100%; }
-
+ 
     body {
       font-family: Georgia, Cambria, "Times New Roman", serif;
       color: var(--ink);
@@ -37,13 +40,13 @@
       margin: 0;
       font-size: 18px;
     }
-
+ 
     #main {
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 56px 24px 80px;
     }
-
+ 
     a {
       color: var(--accent);
       text-decoration: none;
@@ -54,7 +57,7 @@
       outline-offset: 2px;
       border-radius: 2px;
     }
-
+ 
     /* ---------- Profile header ---------- */
     #profile {
       display: flex;
@@ -62,8 +65,8 @@
       align-items: flex-start;
     }
     #profile-pic img {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
@@ -82,7 +85,7 @@
       font-size: 16px;
     }
     #profile-bio p { margin: 0 0 14px; }
-
+ 
     /* ---------- Dividers & sections ---------- */
     .divider {
       border-top: 1px solid var(--hairline);
@@ -94,7 +97,7 @@
       margin: 0 0 16px;
     }
     .section > p { color: var(--muted); font-size: 16px; }
-
+ 
     /* ---------- Updates list ---------- */
     .updates ul {
       list-style: none;
@@ -114,7 +117,7 @@
       font-size: 16px;
       padding-top: 8px;
     }
-
+ 
     /* ---------- Research / project rows ---------- */
     .item {
       display: flex;
@@ -150,13 +153,13 @@
       font-style: normal;
       white-space: nowrap;
     }
-
+ 
     footer {
       color: var(--muted);
       font-size: 14px;
       margin-top: 48px;
     }
-
+ 
     /* ---------- Mobile ---------- */
     @media (max-width: 680px) {
       body { font-size: 17px; }
@@ -168,16 +171,16 @@
       .thumb, .thumb img { flex-basis: auto; width: 100%; height: auto; }
       .thumb img { max-height: 220px; }
     }
-
+ 
     @media (prefers-reduced-motion: reduce) {
       * { scroll-behavior: auto !important; }
     }
   </style>
 </head>
-
+ 
 <body>
 <div id="main">
-
+ 
   <!-- ===================== PROFILE ===================== -->
   <div id="profile">
     <div id="profile-pic">
@@ -185,17 +188,17 @@
            profile.jpg to your repo, then use: src="profile.jpg" -->
       <img alt="Ian Magnuson" src="profile.jpg" />
     </div>
-
+ 
     <div id="profile-intro">
       <div id="profile-name">Ian Magnuson</div>
-
+ 
       <!-- Your email + links. Delete any you don't want. -->
       <p class="contact">
         ian.magnuson@mail.utoronto.ca
         (<a href="https://www.linkedin.com/in/ian-magnuson/">linkedin</a>,
         <a href="https://drive.google.com/file/d/13c3t0IpqOhOCU6Tso4w7u9EADAqwXQ6u/view?usp=sharing">cv</a>)
       </p>
-
+ 
       <!-- 2–3 short paragraphs about you. Keep it plain and specific. -->
       <div id="profile-bio">
         <p>
@@ -212,9 +215,9 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="divider"></div>
-
+ 
   <!-- ===================== UPDATES ===================== -->
   <div class="section updates">
     <h1>Updates</h1>
@@ -222,7 +225,7 @@
       <li><span class="date">Jan 2026:</span> A recent thing that happened — an award, a new role, a project launch.</li>
       <li><span class="date">Nov 2025:</span> Another update. Newest goes on top.</li>
       <li><span class="date">Sep 2025:</span> Started [something], or joined [somewhere].</li>
-
+ 
       <details>
         <summary>See earlier</summary>
         <li><span class="date">Jun 2025:</span> An older update, tucked away.</li>
@@ -230,16 +233,16 @@
       </details>
     </ul>
   </div>
-
+ 
   <div class="divider"></div>
-
+ 
   <!-- ===================== PROJECTS =====================
        Rename this heading to "Research", "Work", "Experience" —
        whatever fits you. Copy a whole .item block to add another. -->
   <div class="section">
     <h1>Projects</h1>
     <p>A few things I've built or worked on.</p>
-
+ 
     <div class="item">
       <div class="thumb">
         <!-- Swap src for your own image, e.g. src="project1.png" -->
@@ -255,7 +258,7 @@
         <p class="desc">One or two sentences on what it is and why it's interesting.</p>
       </div>
     </div>
-
+ 
     <div class="item">
       <div class="thumb">
         <img alt="Project two"
@@ -270,27 +273,28 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="divider"></div>
-
+ 
   <footer>
     <p>Modified template from Jon Barron, Shuran Song, Will Liang, and Andrew Magnuson</p>
   </footer>
-
+ 
 </div>
-
+ 
 <!-- ============================================================
      OPTIONAL: exact LaTeX "Computer Modern" look
      ------------------------------------------------------------
      The reference site uses the Computer Modern font. To use it,
      add this line inside <head>, then change the body font-family
      to include "Latin Modern Roman":
-
+ 
        <link rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/lm-webfont@1.0.0/style.css">
-
+ 
      If it doesn't load, the page safely falls back to Georgia,
      so you lose nothing by trying.
      ============================================================ -->
 </body>
 </html>
+ 
