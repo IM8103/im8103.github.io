@@ -133,6 +133,10 @@
       display: block;
       background: #f0f0f0;
     }
+    /* Taller variant: double the standard thumbnail height (130px -> 260px) */
+    .thumb-tall img {
+      height: 260px;
+    }
     .item-title {
       font-weight: 700;
       display: inline-block;
@@ -167,6 +171,7 @@
       .item { flex-direction: column; gap: 12px; }
       .thumb, .thumb img { flex-basis: auto; width: 100%; height: auto; }
       .thumb img { max-height: 220px; }
+      .thumb-tall img { max-height: 440px; }
     }
  
     @media (prefers-reduced-motion: reduce) {
@@ -199,15 +204,32 @@
       <!-- 2–3 short paragraphs about you. Keep it plain and specific. -->
       <div id="profile-bio">
         <p>
-          I am an undergraduate student at the University of Toronto's United Health Network and Human Biology Department.
-          I've been fortunate enough to work with Kevin Wang and Ian Chan on various research projects. 
+          I am an undergraduate student at the University of Toronto, pursuing an HBSc as a
+          Health and Disease specialist with a minor in Immunology (2024&ndash;2028). I've been
+          fortunate enough to work with Dr. Kevin Wang and Dr. Ian Chan on research projects
+          spanning neuro-oncology and infectious disease.
         </p>
         <p>
-          My research interests include healthcare, neuroscience, oncology, and infectious diseases, specifically complex or rare diseases.
+          At Princess Margaret Hospital's Pencer Brain Tumour Clinic, I study the genomic
+          landscape of pediatric-type gliomas across adolescent, young adult, and adult
+          populations under Dr. Kevin Wang. I am also the first author of a case report&mdash;on
+          disseminated nocardiosis mimicking primary lung cancer with suspected brain
+          metastases&mdash;currently under review at <em>Cureus</em>, supervised by Dr. Ian Chan.
         </p>
         <p>
-          Outside of academia, I draw, program, and play Ultimate Frisbee. I also am leading a chapter of an international non-profit,
-          the Beyond Sciences Initiative, that combats homelessness and food insecurity since 2025.
+          My research interests include healthcare, neuroscience, oncology, and infectious
+          diseases, specifically complex or rare diseases.
+        </p>
+        <p>
+          Alongside my studies, I work as a tour guide and poster representative for Prep101.
+          On campus, I serve as President of the Trinity chapter of the Beyond Sciences
+          Initiative, an international non-profit, where I lead a 15-member student team
+          combatting homelessness and food insecurity. My work has been recognized with the
+          Dean's List (twice), the Horace B. Speakman Scholarship, and the Beyond Sciences
+          Initiative Undergraduate Outreach Award.
+        </p>
+        <p>
+          Outside of academia, I draw, program, take photos, and play Ultimate Frisbee.
         </p>
       </div>
     </div>
@@ -219,6 +241,7 @@
   <div class="section updates">
     <h1>Updates</h1>
     <ul>
+      <li><span class="date">Sep 2026:</span> Started as a tour guide and poster representative for Prep101.</li>
       <li><span class="date">Sep 2026:</span> Made this website!</li>
     </ul>
   </div>
@@ -240,11 +263,11 @@
     <p>A few things I've built, made, or worked on.</p>
 
     <div class="item">
-      <div class="thumb">
+      <div class="thumb thumb-tall">
         <!-- Add a file named project-sculpture.jpg next to index.html -->
         <img alt="Life-sized sculpture"
              src="project-sculpture.jpg"
-             onerror="this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='130' fill='%23e9eef7'/><text x='100' y='140' font-family='Georgia' font-size='14' fill='%238a9ab5' text-anchor='middle'>image</text></svg>&quot;" />
+             onerror="this.src=&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='260'><rect width='200' height='260' fill='%23e9eef7'/><text x='100' y='135' font-family='Georgia' font-size='14' fill='%238a9ab5' text-anchor='middle'>image</text></svg>&quot;" />
       </div>
       <div>
         <a class="item-title" href="#">Life-Sized Sculpture</a>
